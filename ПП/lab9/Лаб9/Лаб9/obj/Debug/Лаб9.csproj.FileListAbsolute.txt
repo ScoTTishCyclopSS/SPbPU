@@ -1,0 +1,12 @@
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\bin\Debug\Лаб9.exe.config
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\bin\Debug\Лаб9.exe
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\bin\Debug\Лаб9.pdb
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.csprojResolveAssemblyReference.cache
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.Form1.resources
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.Properties.Resources.resources
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.csproj.GenerateResource.Cache
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.exe
+F:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.pdb
+D:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\bin\Debug\Лаб9.exe.config
+D:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.exe
+D:\УЧЕБА\ПП\Лаб9\Лаб9\Лаб9\obj\Debug\Лаб9.pdb

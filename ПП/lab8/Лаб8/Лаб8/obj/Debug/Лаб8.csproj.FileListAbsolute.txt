@@ -1,0 +1,9 @@
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\bin\Debug\Лаб8.exe.config
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\bin\Debug\Лаб8.exe
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\bin\Debug\Лаб8.pdb
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\obj\Debug\Лаб8.csprojResolveAssemblyReference.cache
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\obj\Debug\Лаб8.Form1.resources
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\obj\Debug\Лаб8.Properties.Resources.resources
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\obj\Debug\Лаб8.csproj.GenerateResource.Cache
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\obj\Debug\Лаб8.exe
+F:\УЧЕБА\ПП\Лаб8\Лаб8\Лаб8\obj\Debug\Лаб8.pdb

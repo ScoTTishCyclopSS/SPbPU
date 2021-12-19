@@ -1,0 +1,19 @@
+D:\УЧЕБА\ПП\Лаб3\Лаб3\Лаб3\bin\Debug\Лаб3.exe.config
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия\Лаб3\bin\Debug\Лаб3.exe.config
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\bin\Debug\Лаб3.exe.config
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\bin\Debug\Лаб3.exe
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\bin\Debug\Лаб3.pdb
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.Form1.resources
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.Properties.Resources.resources
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.csproj.GenerateResource.Cache
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.exe
+D:\УЧЕБА\ПП\Лаб3\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.pdb
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\bin\Debug\Лаб3.exe.config
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.exe
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.pdb
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\bin\Debug\Лаб3.exe
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\bin\Debug\Лаб3.pdb
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.csprojResolveAssemblyReference.cache
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.Form1.resources
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.Properties.Resources.resources
+D:\УЧЕБА\ПП\Лаб3,4,5\Лаб3 - копия - копия\Лаб3\obj\Debug\Лаб3.csproj.GenerateResource.Cache
