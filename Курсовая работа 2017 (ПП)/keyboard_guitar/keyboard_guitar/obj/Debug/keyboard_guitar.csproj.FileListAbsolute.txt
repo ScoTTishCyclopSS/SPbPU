@@ -1,0 +1,62 @@
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe.config
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Form1.resources
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Properties.Resources.resources
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csproj.GenerateResource.Cache
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.dll
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.xml
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe.config
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.dll
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.xml
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csprojResolveAssemblyReference.cache
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Form1.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Properties.Resources.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csproj.GenerateResource.Cache
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe.config
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.dll
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.xml
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csprojResolveAssemblyReference.cache
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Form1.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Properties.Resources.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csproj.GenerateResource.Cache
+C:\Users\Fedmedio\Desktop\STUDY PC\Курсовая ПП\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe.config
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Form1.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Properties.Resources.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csproj.GenerateResource.Cache
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.dll
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.xml
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\Spectrum.baml
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\Spectrum.g.cs
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar_MarkupCompile.cache
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.g.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csprojResolveAssemblyReference.cache
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe.config
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.exe
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\keyboard_guitar.pdb
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.dll
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\NAudio.xml
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Form1.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.Properties.Resources.resources
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csproj.GenerateResource.Cache
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\CircularProgressBar.dll
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\WinFormAnimation.dll
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\CircularProgressBar.xml
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\bin\Debug\WinFormAnimation.xml
+C:\Users\Fedmedio\Desktop\STUDY PC\kursovaya\keyboard_guitar - копия\keyboard_guitar\keyboard_guitar\obj\Debug\keyboard_guitar.csprojResolveAssemblyReference.cache
