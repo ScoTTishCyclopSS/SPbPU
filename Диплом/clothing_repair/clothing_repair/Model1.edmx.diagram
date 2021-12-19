@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="716bdca57dfd42c9959a4340995c72f6" Name="Diagram1" ZoomLevel="113">
+        <EntityTypeShape EntityType="clothing_repairModel.categories" Width="1.5" PointX="1.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="clothing_repairModel.customer" Width="1.5" PointX="3.875" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="clothing_repairModel.order" Width="1.5" PointX="3.875" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="clothing_repairModel.user" Width="1.5" PointX="1.875" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="clothing_repairModel.categoriesorder" />
+        <AssociationConnector Association="clothing_repairModel.customerorder" />
+        <AssociationConnector Association="clothing_repairModel.userorder" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

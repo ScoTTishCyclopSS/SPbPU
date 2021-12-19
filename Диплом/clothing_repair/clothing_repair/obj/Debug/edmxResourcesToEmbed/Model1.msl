@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="clothing_repairModelStoreContainer" CdmEntityContainer="clothing_repairEntities1">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.categories)">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.customer)">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.order)">
+        <MappingFragment StoreEntitySet="order">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="date_of_receipt" ColumnName="date_of_receipt" />
+          <ScalarProperty Name="date_of_give" ColumnName="date_of_give" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="who_issued" ColumnName="who_issued" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.user)">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="log_in" ColumnName="log_in" />
+          <ScalarProperty Name="pass_word" ColumnName="pass_word" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="categoriesorder" TypeName="clothing_repairModel.categoriesorder" StoreEntitySet="order">
+      <EndProperty Name="categories">
+        <ScalarProperty Name="id" ColumnName="categories_id" />
+      </EndProperty>
+      <EndProperty Name="order">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="customerorder" TypeName="clothing_repairModel.customerorder" StoreEntitySet="order">
+      <EndProperty Name="customer">
+        <ScalarProperty Name="id" ColumnName="customer_id" />
+      </EndProperty>
+      <EndProperty Name="order">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="userorder" TypeName="clothing_repairModel.userorder" StoreEntitySet="order">
+      <EndProperty Name="user">
+        <ScalarProperty Name="id" ColumnName="user_id" />
+      </EndProperty>
+      <EndProperty Name="order">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

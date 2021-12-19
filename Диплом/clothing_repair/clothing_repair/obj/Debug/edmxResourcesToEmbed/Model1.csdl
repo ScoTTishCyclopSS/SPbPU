@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="clothing_repairModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="order" Relationship="clothing_repairModel.categoriesorder" FromRole="categories" ToRole="order" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="order" Relationship="clothing_repairModel.customerorder" FromRole="customer" ToRole="order" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="date_of_receipt" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="categories" Relationship="clothing_repairModel.categoriesorder" FromRole="order" ToRole="categories" />
+    <NavigationProperty Name="customer" Relationship="clothing_repairModel.customerorder" FromRole="order" ToRole="customer" />
+    <NavigationProperty Name="user" Relationship="clothing_repairModel.userorder" FromRole="order" ToRole="user" />
+    <Property Name="date_of_give" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="who_issued" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="log_in" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pass_word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="order" Relationship="clothing_repairModel.userorder" FromRole="user" ToRole="order" />
+  </EntityType>
+  <EntityContainer Name="clothing_repairEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="Self.categories" />
+    <EntitySet Name="customer" EntityType="Self.customer" />
+    <EntitySet Name="order" EntityType="Self.order" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="categoriesorder" Association="clothing_repairModel.categoriesorder">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <AssociationSet Name="customerorder" Association="clothing_repairModel.customerorder">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <AssociationSet Name="userorder" Association="clothing_repairModel.userorder">
+      <End Role="user" EntitySet="user" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="categoriesorder">
+    <End Type="clothing_repairModel.categories" Role="categories" Multiplicity="1" />
+    <End Type="clothing_repairModel.order" Role="order" Multiplicity="*" />
+  </Association>
+  <Association Name="customerorder">
+    <End Type="clothing_repairModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="clothing_repairModel.order" Role="order" Multiplicity="*" />
+  </Association>
+  <Association Name="userorder">
+    <End Type="clothing_repairModel.user" Role="user" Multiplicity="1" />
+    <End Type="clothing_repairModel.order" Role="order" Multiplicity="*" />
+  </Association>
+</Schema>

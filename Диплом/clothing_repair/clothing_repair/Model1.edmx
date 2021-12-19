@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="clothing_repairModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="clothing_repairModelStoreContainer">
+    <EntitySet Name="categories" EntityType="clothing_repairModel.Store.categories" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="customer" EntityType="clothing_repairModel.Store.customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="order" EntityType="clothing_repairModel.Store.order" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="user" EntityType="clothing_repairModel.Store.user" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="categoriesorder" Association="clothing_repairModel.Store.categoriesorder">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <AssociationSet Name="customerorder" Association="clothing_repairModel.Store.customerorder">
+      <End Role="customer" EntitySet="customer" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <AssociationSet Name="userorder" Association="clothing_repairModel.Store.userorder">
+      <End Role="user" EntitySet="user" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="mail" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="tel" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="price" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="date_of_receipt" Type="datetime" Nullable="false" />
+    <Property Name="date_of_give" Type="datetime" Nullable="true" />
+    <Property Name="status" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="who_issued" Type="nvarchar" Nullable="true" MaxLength="50" />
+    <Property Name="categories_id" Type="int" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="role" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="log_in" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="pass_word" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Association Name="categoriesorder">
+    <End Role="categories" Type="clothing_repairModel.Store.categories" Multiplicity="1" />
+    <End Role="order" Type="clothing_repairModel.Store.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="categories_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="customerorder">
+    <End Role="customer" Type="clothing_repairModel.Store.customer" Multiplicity="1" />
+    <End Role="order" Type="clothing_repairModel.Store.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="userorder">
+    <End Role="user" Type="clothing_repairModel.Store.user" Multiplicity="1" />
+    <End Role="order" Type="clothing_repairModel.Store.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="clothing_repairModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="categories">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="order" Relationship="clothing_repairModel.categoriesorder" FromRole="categories" ToRole="order" />
+        </EntityType>
+        <EntityType Name="customer">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="order" Relationship="clothing_repairModel.customerorder" FromRole="customer" ToRole="order" />
+        </EntityType>
+        <EntityType Name="order">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="date_of_receipt" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="categories" Relationship="clothing_repairModel.categoriesorder" FromRole="order" ToRole="categories" />
+          <NavigationProperty Name="customer" Relationship="clothing_repairModel.customerorder" FromRole="order" ToRole="customer" />
+          <NavigationProperty Name="user" Relationship="clothing_repairModel.userorder" FromRole="order" ToRole="user" />
+          <Property Name="date_of_give" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="who_issued" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="log_in" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="pass_word" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="order" Relationship="clothing_repairModel.userorder" FromRole="user" ToRole="order" />
+        </EntityType>
+        <EntityContainer Name="clothing_repairEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="categories" EntityType="Self.categories" />
+          <EntitySet Name="customer" EntityType="Self.customer" />
+          <EntitySet Name="order" EntityType="Self.order" />
+          <EntitySet Name="user" EntityType="Self.user" />
+          <AssociationSet Name="categoriesorder" Association="clothing_repairModel.categoriesorder">
+            <End Role="categories" EntitySet="categories" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <AssociationSet Name="customerorder" Association="clothing_repairModel.customerorder">
+            <End Role="customer" EntitySet="customer" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+          <AssociationSet Name="userorder" Association="clothing_repairModel.userorder">
+            <End Role="user" EntitySet="user" />
+            <End Role="order" EntitySet="order" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="categoriesorder">
+          <End Type="clothing_repairModel.categories" Role="categories" Multiplicity="1" />
+          <End Type="clothing_repairModel.order" Role="order" Multiplicity="*" />
+        </Association>
+        <Association Name="customerorder">
+          <End Type="clothing_repairModel.customer" Role="customer" Multiplicity="1" />
+          <End Type="clothing_repairModel.order" Role="order" Multiplicity="*" />
+        </Association>
+        <Association Name="userorder">
+          <End Type="clothing_repairModel.user" Role="user" Multiplicity="1" />
+          <End Type="clothing_repairModel.order" Role="order" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="clothing_repairModelStoreContainer" CdmEntityContainer="clothing_repairEntities1">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.categories)">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="category" ColumnName="category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customer">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.customer)">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="order">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.order)">
+        <MappingFragment StoreEntitySet="order">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="date_of_receipt" ColumnName="date_of_receipt" />
+          <ScalarProperty Name="date_of_give" ColumnName="date_of_give" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="who_issued" ColumnName="who_issued" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user">
+      <EntityTypeMapping TypeName="IsTypeOf(clothing_repairModel.user)">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="log_in" ColumnName="log_in" />
+          <ScalarProperty Name="pass_word" ColumnName="pass_word" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="categoriesorder" TypeName="clothing_repairModel.categoriesorder" StoreEntitySet="order">
+      <EndProperty Name="categories">
+        <ScalarProperty Name="id" ColumnName="categories_id" />
+      </EndProperty>
+      <EndProperty Name="order">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="customerorder" TypeName="clothing_repairModel.customerorder" StoreEntitySet="order">
+      <EndProperty Name="customer">
+        <ScalarProperty Name="id" ColumnName="customer_id" />
+      </EndProperty>
+      <EndProperty Name="order">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="userorder" TypeName="clothing_repairModel.userorder" StoreEntitySet="order">
+      <EndProperty Name="user">
+        <ScalarProperty Name="id" ColumnName="user_id" />
+      </EndProperty>
+      <EndProperty Name="order">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
