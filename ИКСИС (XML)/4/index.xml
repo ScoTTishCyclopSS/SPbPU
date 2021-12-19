@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list_of_client SYSTEM "doc.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<list_of_client>
+    <client id="1">
+        <first_name>Иван</first_name>
+        <last_name>Петров</last_name>
+        <specialty>Программист</specialty>
+        <organization>
+            <name>ОАО "ВКонтакте"</name>
+            <address>СПб, Невский проспект 91</address>
+        </organization>
+        <home_address>
+            <city>СПб</city>
+            <street>Зеленая</street>
+            <house>55</house>
+            <apartment>2</apartment>
+        </home_address>
+        <phone>
+            <home_phone>222-22-22</home_phone>
+            <mobile_phone>+79117653456</mobile_phone>
+        </phone>
+        <inn>244443245554</inn>
+    </client>
+    <client id="2">
+        <first_name>Пётр</first_name>
+        <last_name>Осипов</last_name>
+        <specialty>Менеджер</specialty>
+        <organization>
+            <name>ООО "Жемчужина"</name>
+            <address>СПб, ул. Большая</address>
+        </organization>
+        <home_address>
+            <city>СПб</city>
+            <street>Большая</street>
+            <house>87</house>
+            <apartment>1</apartment>
+        </home_address>
+        <phone>
+            <home_phone>333-44-55</home_phone>
+            <mobile_phone>+79348767722</mobile_phone>   
+        </phone>
+        <inn>437289732974</inn>
+    </client>
+    <client id="3">
+        <first_name>Михаил</first_name>
+        <last_name>Заречный</last_name>
+        <specialty>СТО</specialty>
+        <organization>
+            <name>ОАО "Mail.ru"</name>
+            <address>Москва, ул. Степная</address>
+        </organization>
+        <home_address>
+            <city>Москва</city>
+            <street>Арбат</street>
+            <house>19</house>
+            <apartment>8</apartment>
+        </home_address>
+        <phone>
+            <home_phone>785-13-97</home_phone>
+            <mobile_phone>+79872345567</mobile_phone>  
+        </phone>
+        <inn>153698752315</inn>
+    </client>
+    <client id="4">
+        <first_name>Михаил</first_name>
+        <last_name>Лесков</last_name>
+        <specialty>СЕО</specialty>
+        <organization>
+            <name>ПАО "Банк Санкт-Петербург"</name>
+            <address>СПб, ул. Набережная</address>
+        </organization>
+        <home_address>
+            <city>СПб</city>
+            <street>Набережная</street>
+            <house>25</house>
+            <apartment>3</apartment>
+        </home_address>
+        <phone>
+            <home_phone>896-45-03</home_phone>
+            <mobile_phone>+79876345665</mobile_phone>
+        </phone>
+        <inn>153698752315</inn>
+    </client>
+</list_of_client>

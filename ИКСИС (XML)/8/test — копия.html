@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<form action="" id="f1">
+<label name="ll">Марка авто</label><br>
+<input type="text" name="tt"><br>
+<input type="button" name="n" value="Нажми">
+<input type="button" name="p" value="Просмотр">
+</form>
+<script>
+const data = [
+	{car: 'Lada',	event: 'focus',	input: f1.tt},
+	{car: 'Mazda',	event: 'blur',	input: f1.tt},
+	{car: 'Ford',	event: 'click',	input: f1.ll},
+	{car: 'Tesla',	event: 'dblclick',	input: f1.n},
+	{car: 'Nissan',	event: 'select',	input: f1.tt}
+]
+
+const cars = data
+	.map(x => x.car)
+	.join(', ');
+
+var interval = null;
+
+const echo = s => () => {
+	f1.car.value = '';
+	var chars = s.split('');
+	clearInterval(interval);
+	interval = setInterval( () => {
+		if (chars.length == 0){
+			clearInterval(interval);
+		}
+		else {
+			f1.car.value += chars.shift();
+		}
+	}, 500);
+}
+
+data.forEach(x => {
+	x.input.addEventListener(
+		x.event, 
+		echo(x.car)
+	);
+});
+
+f1.p.addEventListener('click', echo(cars));
+</script>
+</body>
+</html>
