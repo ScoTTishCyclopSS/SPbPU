@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="card" EntityType="Model1.card" />
+    <EntitySet Name="customer" EntityType="Model1.customer" />
+    <EntitySet Name="credit" EntityType="Model1.credit" />
+    <AssociationSet Name="creditcard" Association="Model1.creditcard">
+      <End Role="credit" EntitySet="credit" />
+      <End Role="card" EntitySet="card" />
+    </AssociationSet>
+    <AssociationSet Name="creditcustomer" Association="Model1.creditcustomer">
+      <End Role="credit" EntitySet="credit" />
+      <End Role="customer" EntitySet="customer" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="card">
+    <Key>
+      <PropertyRef Name="card_id" />
+    </Key>
+    <Property Name="card_id" Type="Int32" Nullable="false" />
+    <Property Name="IL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="card_type" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="system_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bank_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="bill_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="check_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cvv" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="card_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="card_end" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="check_word" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="credit" Relationship="Model1.creditcard" FromRole="card" ToRole="credit" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="Int32" Nullable="false" />
+    <Property Name="fio" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="passport_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="passport_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="passport_info" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="sex" Type="String" Nullable="false" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="family_status" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="birthdate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="tel_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="education" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="education_place_code" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="live_place" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="work_place" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="work_tel_number" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="work_post" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="month_income" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="credit_reason" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="credit" Relationship="Model1.creditcustomer" FromRole="customer" ToRole="credit" />
+  </EntityType>
+  <EntityType Name="credit">
+    <Key>
+      <PropertyRef Name="credit_number" />
+    </Key>
+    <Property Name="credit_number" Type="Int32" Nullable="false" />
+    <Property Name="percent_set" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="currency" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="credit_start" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="credit_end" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="remainer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="month_sum" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="months" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="card" Relationship="Model1.creditcard" FromRole="credit" ToRole="card" />
+    <NavigationProperty Name="customer" Relationship="Model1.creditcustomer" FromRole="credit" ToRole="customer" />
+  </EntityType>
+  <Association Name="creditcard">
+    <End Type="Model1.credit" Role="credit" Multiplicity="1" />
+    <End Type="Model1.card" Role="card" Multiplicity="1" />
+  </Association>
+  <Association Name="creditcustomer">
+    <End Type="Model1.credit" Role="credit" Multiplicity="1" />
+    <End Type="Model1.customer" Role="customer" Multiplicity="1" />
+  </Association>
+</Schema>

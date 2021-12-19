@@ -1,0 +1,56 @@
+﻿
+            var new_credit = new credit()
+            {
+                percent_set = percent.Text,
+                currency = currency.Text,
+                credit_start = creditStart,
+                credit_end = creditEnd,
+                sum = sum_credit.Text,//сумма заема совпадает с суммой остатка на данном этапе, тк происходит первоначальное добавление клиента в базу
+                remainer = sum_credit.Text,
+                month_sum = res_month_incert.Text,
+                months = sum_month.Text
+            };
+            var new_customer = new customer()
+            {
+
+                //Информация о клиенте
+                fio = fio.Text,
+                passport_number = passport_number.Text,
+                passport_date = passDate,
+                passport_info = passport_info.Text,
+                sex = sex,
+                family_status = family_status.Text,
+                birthdate = birthDate,
+                tel_number = tel_number.Text,
+                email = email.Text,
+                education = education.Text,
+                education_place_code = education_place_code.Text,
+                live_place = live_place.Text,
+                work_place = work_place.Text,
+                work_tel_number = work_place_number.Text,
+                work_post = work_post.Text,
+                month_income = month_income.Text,
+                credit_reason = credit_reason.Text
+            };
+            var new_card = new card()
+            {
+                IL = IL.Text,
+                card_type = card_type.Text,
+                system_code = system_code.Text,
+                bank_code = bank_code.Text,
+                bill_number = bill_number.Text,
+                check_number = check_number.Text,
+                cvv = cvv.Text,
+                card_start = cardStart,
+                card_end = cardEnd,
+                check_word = check_word.Text
+
+            };
+            
+            new_credit.customer = new_customer;
+            new_credit.card = new_card;
+
+                db.credit.Add(new_credit);
+                db.customer.Add(new_customer);
+                db.card.Add(new_card);
+                db.SaveChanges();

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="card" EntityType="Model1.Store.card" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="customer" EntityType="Model1.Store.customer" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="credit" EntityType="Model1.Store.credit" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="creditcard" Association="Model1.Store.creditcard">
+      <End Role="credit" EntitySet="credit" />
+      <End Role="card" EntitySet="card" />
+    </AssociationSet>
+    <AssociationSet Name="creditcustomer" Association="Model1.Store.creditcustomer">
+      <End Role="credit" EntitySet="credit" />
+      <End Role="customer" EntitySet="customer" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="card">
+    <Key>
+      <PropertyRef Name="card_id" />
+    </Key>
+    <Property Name="card_id" Type="int" Nullable="false" />
+    <Property Name="IL" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="card_type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="system_code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="bank_code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="bill_number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="check_number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="cvv" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="card_start" Type="datetime" Nullable="false" />
+    <Property Name="card_end" Type="datetime" Nullable="false" />
+    <Property Name="check_word" Type="nchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="fio" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="passport_number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="passport_date" Type="datetime" Nullable="false" />
+    <Property Name="passport_info" Type="nchar" Nullable="false" MaxLength="150" />
+    <Property Name="sex" Type="nchar" Nullable="false" MaxLength="150" />
+    <Property Name="family_status" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="birthdate" Type="datetime" Nullable="false" />
+    <Property Name="tel_number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="char" Nullable="false" MaxLength="50" />
+    <Property Name="education" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="education_place_code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="live_place" Type="nchar" Nullable="false" MaxLength="100" />
+    <Property Name="work_place" Type="nchar" Nullable="false" MaxLength="100" />
+    <Property Name="work_tel_number" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="work_post" Type="nchar" Nullable="false" MaxLength="50" />
+    <Property Name="month_income" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="credit_reason" Type="nchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="credit">
+    <Key>
+      <PropertyRef Name="credit_number" />
+    </Key>
+    <Property Name="credit_number" Type="int" Nullable="false" />
+    <Property Name="percent_set" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="currency" Type="char" Nullable="false" MaxLength="10" />
+    <Property Name="credit_start" Type="datetime" Nullable="false" />
+    <Property Name="credit_end" Type="datetime" Nullable="false" />
+    <Property Name="remainer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="month_sum" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="months" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="card_card_id" Type="int" Nullable="false" />
+    <Property Name="customer_customer_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="creditcard">
+    <End Role="credit" Type="Model1.Store.credit" Multiplicity="*" />
+    <End Role="card" Type="Model1.Store.card" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="card">
+        <PropertyRef Name="card_id" />
+      </Principal>
+      <Dependent Role="credit">
+        <PropertyRef Name="card_card_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="creditcustomer">
+    <End Role="credit" Type="Model1.Store.credit" Multiplicity="*" />
+    <End Role="customer" Type="Model1.Store.customer" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="credit">
+        <PropertyRef Name="customer_customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
