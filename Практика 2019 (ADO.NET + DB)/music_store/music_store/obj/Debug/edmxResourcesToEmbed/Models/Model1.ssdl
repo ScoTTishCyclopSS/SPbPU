@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="music_storeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="lots">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="cost" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="providers_id" Type="int" Nullable="false" />
+    <Property Name="products_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="weigh" Type="float" Nullable="false" />
+    <Property Name="price" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="image" Type="varbinary(max)" />
+    <Property Name="categories_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="providers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel_number" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="total_cost" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="sellers_id" Type="int" Nullable="false" />
+    <Property Name="products_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sellers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fio" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="passport_info" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="log_in" Type="nvarchar" MaxLength="50" />
+    <Property Name="pass_word" Type="nvarchar" MaxLength="50" />
+    <Property Name="role" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_categoriesproducts">
+    <End Role="categories" Type="Self.categories" Multiplicity="1" />
+    <End Role="products" Type="Self.products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="products">
+        <PropertyRef Name="categories_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productslots">
+    <End Role="products" Type="Self.products" Multiplicity="1" />
+    <End Role="lots" Type="Self.lots" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lots">
+        <PropertyRef Name="products_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_productssales">
+    <End Role="products" Type="Self.products" Multiplicity="1" />
+    <End Role="sales" Type="Self.sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="products">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sales">
+        <PropertyRef Name="products_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_providerslots">
+    <End Role="providers" Type="Self.providers" Multiplicity="1" />
+    <End Role="lots" Type="Self.lots" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="providers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="lots">
+        <PropertyRef Name="providers_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_sellerssales">
+    <End Role="sellers" Type="Self.sellers" Multiplicity="1" />
+    <End Role="sales" Type="Self.sales" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sellers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="sales">
+        <PropertyRef Name="sellers_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="Insert_User" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="login" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar" Mode="In" />
+    <Parameter Name="role" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="LoginByUsernamePassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="login" Type="varchar" Mode="In" />
+    <Parameter Name="password" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="music_storeModelStoreContainer">
+    <EntitySet Name="categories" EntityType="Self.categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="lots" EntityType="Self.lots" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="providers" EntityType="Self.providers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sales" EntityType="Self.sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sellers" EntityType="Self.sellers" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_categoriesproducts" Association="Self.FK_categoriesproducts">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="products" EntitySet="products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productslots" Association="Self.FK_productslots">
+      <End Role="products" EntitySet="products" />
+      <End Role="lots" EntitySet="lots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_productssales" Association="Self.FK_productssales">
+      <End Role="products" EntitySet="products" />
+      <End Role="sales" EntitySet="sales" />
+    </AssociationSet>
+    <AssociationSet Name="FK_providerslots" Association="Self.FK_providerslots">
+      <End Role="providers" EntitySet="providers" />
+      <End Role="lots" EntitySet="lots" />
+    </AssociationSet>
+    <AssociationSet Name="FK_sellerssales" Association="Self.FK_sellerssales">
+      <End Role="sellers" EntitySet="sellers" />
+      <End Role="sales" EntitySet="sales" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron head">
+
+    <h1>MUSIC_STORE v0.0.1</h1>
+    <p class="lead">
+        Management system of accounting products for the administration and sellers
+    </p>
+    @{ if (User.Identity.IsAuthenticated)
+        {
+            <h1>Welcome back @User.Identity.Name</h1>
+            @Html.ActionLink("Sign-out :(", "Signout", "UsersASPs")
+        }
+        else
+        {
+            @Html.ActionLink("Login!", "Login", "UsersASPs", null, new { @class = "btn_login" })
+        }
+    }
+</div>
+
+<div>   
+    <img class="guitar" src="~/Content/1.jpg" alt="no pic lol"/>
+</div>

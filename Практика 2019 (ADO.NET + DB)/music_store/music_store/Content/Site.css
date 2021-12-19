@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #cc5656;
+    color: white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+.btn_login
+{
+    border: 2px solid white;
+    padding:5px 5px 5px 5px;
+    border-radius: 3px 5px;
+}
+
+.guitar {
+    border: 5px dashed white;
+    padding: 5px 5px 5px 5px;
+    border-radius: 3px 5px;
+    display:block;
+    width:100%;
+    height:100%;
+
+}
+
+.head {
+    background-color: #ed6666 !important;
+}
+.sas {
+    border: 2px solid white;
+    border-collapse: collapse;
+    border-radius: 3px 5px;
+}
+    .sas tr th, .sas tr td {
+        background-color: #ed6666;
+        border: 2px solid white;
+        border-radius: 3px 5px;
+        border-collapse: collapse;
+        padding:5px 5px 5px 5px;
+    }

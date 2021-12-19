@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="music_storeModelStoreContainer" CdmEntityContainer="music_storeEntities4">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="IsTypeOf(music_storeModel.categories)">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lots">
+      <EntityTypeMapping TypeName="IsTypeOf(music_storeModel.lots)">
+        <MappingFragment StoreEntitySet="lots">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="cost" ColumnName="cost" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="providers_id" ColumnName="providers_id" />
+          <ScalarProperty Name="products_id" ColumnName="products_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="IsTypeOf(music_storeModel.products)">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="weigh" ColumnName="weigh" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="categories_id" ColumnName="categories_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="providers">
+      <EntityTypeMapping TypeName="IsTypeOf(music_storeModel.providers)">
+        <MappingFragment StoreEntitySet="providers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="manufacturer" ColumnName="manufacturer" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel_number" ColumnName="tel_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sales">
+      <EntityTypeMapping TypeName="IsTypeOf(music_storeModel.sales)">
+        <MappingFragment StoreEntitySet="sales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="total_cost" ColumnName="total_cost" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="sellers_id" ColumnName="sellers_id" />
+          <ScalarProperty Name="products_id" ColumnName="products_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sellers">
+      <EntityTypeMapping TypeName="IsTypeOf(music_storeModel.sellers)">
+        <MappingFragment StoreEntitySet="sellers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="fio" ColumnName="fio" />
+          <ScalarProperty Name="passport_info" ColumnName="passport_info" />
+          <ScalarProperty Name="log_in" ColumnName="log_in" />
+          <ScalarProperty Name="pass_word" ColumnName="pass_word" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Insert_User" FunctionName="music_storeModel.Store.Insert_User" />
+    <FunctionImportMapping FunctionImportName="LoginByUsernamePassword" FunctionName="music_storeModel.Store.LoginByUsernamePassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="music_storeModel.LoginByUsernamePassword_Result1">
+          <ScalarProperty Name="log_in" ColumnName="log_in" />
+          <ScalarProperty Name="pass_word" ColumnName="pass_word" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
