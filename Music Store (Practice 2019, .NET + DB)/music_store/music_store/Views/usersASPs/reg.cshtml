@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Регистрация";
+}
+
+
+<section class="content register">
+
+    <form method="post">
+
+        <input type="text" name="log_in" required placeholder="Логин">
+
+        <input type="password" name="pass_word" required placeholder="Пароль">
+
+        <input type="text" name="role" required placeholder="Роль">
+
+        <button type="submit">Зарегистрироваться</button>
+
+        <span class="error">@ViewBag.Error</span>
+
+    </form>
+
+</section>

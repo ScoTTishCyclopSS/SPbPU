@@ -1,0 +1,50 @@
+﻿@model music_store.Models.providers
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>providers</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.manufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.manufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_number)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

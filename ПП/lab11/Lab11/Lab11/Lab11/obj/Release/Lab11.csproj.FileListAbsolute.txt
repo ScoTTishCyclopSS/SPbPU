@@ -1,8 +1,0 @@
-H:\Lab11\Lab11\Lab11\bin\Release\Lab11.exe.config
-H:\Lab11\Lab11\Lab11\bin\Release\Lab11.exe
-H:\Lab11\Lab11\Lab11\bin\Release\Lab11.pdb
-H:\Lab11\Lab11\Lab11\obj\Release\Lab11.Form1.resources
-H:\Lab11\Lab11\Lab11\obj\Release\Lab11.Properties.Resources.resources
-H:\Lab11\Lab11\Lab11\obj\Release\Lab11.csproj.GenerateResource.Cache
-H:\Lab11\Lab11\Lab11\obj\Release\Lab11.exe
-H:\Lab11\Lab11\Lab11\obj\Release\Lab11.pdb

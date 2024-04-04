@@ -1,0 +1,53 @@
+﻿<Window x:Class="clothing_repair.order_info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Style="{StaticResource ResourceKey=CustomFont}"
+        Title="CR 1.0 - Инфомация о заказе" Height="457.303" Width="385" WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <TextBox x:Name="num" HorizontalAlignment="Left" Height="30" Margin="125,8,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <TextBox x:Name="pr" HorizontalAlignment="Left" Height="30" Margin="125,42,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <TextBox x:Name="cat" HorizontalAlignment="Left" Height="30" Margin="125,78,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <TextBox x:Name="cl" HorizontalAlignment="Left" Height="30" Margin="125,112,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <TextBox x:Name="mat" HorizontalAlignment="Left" Height="30" Margin="125,148,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <Label Content="Номер заказа" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"
+               FontSize="14" Height="30" Width="110" />
+        <Label Content="Стоимость" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" FontSize="14"
+               Height="30" Width="110" />
+        <Label Content="Вид ремонта" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top"
+               FontSize="14" Height="30" Width="110" />
+        <Label Content="Клиент" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" FontSize="14"
+               Height="30" Width="110" />
+        <Label Content="Мастер" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" FontSize="14"
+               Height="30" Width="110" />
+        <Label Content="Дата приема" HorizontalAlignment="Left" Margin="10,185,0,0" VerticalAlignment="Top"
+               FontSize="14" Height="30" Width="110" />
+        <Label Content="Статус" HorizontalAlignment="Left" Margin="10,220,0,0" VerticalAlignment="Top" FontSize="14"
+               Height="30" Width="110" />
+        <Label Content="Дата выдачи" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top"
+               FontSize="14" Height="30" Width="110" />
+        <TextBox x:Name="fd" HorizontalAlignment="Left" Height="30" Margin="125,182,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <TextBox x:Name="st" HorizontalAlignment="Left" Height="30" Margin="125,218,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" TextChanged="St_TextChanged" />
+        <TextBox x:Name="ed" HorizontalAlignment="Left" Height="30" Margin="125,253,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+        <Button x:Name="order_button" Background="#FFD0B689" BorderBrush="#FFEED1A0" Content="хнопка"
+                HorizontalAlignment="Left" Margin="10,325,0,0" VerticalAlignment="Top" Width="337" Height="35"
+                Click="Order_button_Click" />
+        <Button x:Name="order_cancel" Background="#FFD0B689" BorderBrush="#FFEED1A0" Content="Отказать в выполнении"
+                HorizontalAlignment="Left" Margin="10,365,0,0" VerticalAlignment="Top" Width="337" Height="35"
+                Click="Order_cancel_Click" />
+        <Label Content="Кто выдал" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top" FontSize="14"
+               Height="30" Width="110" />
+        <TextBox x:Name="wi" HorizontalAlignment="Left" Height="30" Margin="125,288,0,0" TextWrapping="Wrap"
+                 Text="TextBox" VerticalAlignment="Top" Width="222" FontSize="14" />
+    </Grid>
+</Window>

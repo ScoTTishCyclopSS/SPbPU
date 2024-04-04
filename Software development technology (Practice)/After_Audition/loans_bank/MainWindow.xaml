@@ -1,0 +1,250 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Class="loans_bank.MainWindow"
+    Title="Make credit 1.0" Height="720" Width="1280" MaxWidth="1280" MaxHeight="720"
+    ScrollViewer.VerticalScrollBarVisibility="Hidden" FontFamily="Comfortaa" Background="#FF673AB7"
+    WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <TabControl x:Name="main_tabcon" HorizontalAlignment="Left" Width="1280" Margin="0,0,0,0"
+                    RenderTransformOrigin="0.5,0.5">
+            <TabControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleX="0.284" />
+                    <RotateTransform />
+                    <TranslateTransform X="1.495" />
+                </TransformGroup>
+            </TabControl.RenderTransform>
+            <TabItem x:Name="main_reg" Header="Регистрация клиента в кредитной системе" Width="460" FontSize="16">
+                <Grid Background="#FFE5E5E5" Margin="0">
+                    <Label Content="ФИО клиента:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138"
+                           FontWeight="Bold" FontSize="16" Margin="6,0,0,0" Height="35" />
+                    <TextBox x:Name="fio" HorizontalAlignment="Left" Height="35" Margin="387,10,0,0"
+                             TextWrapping="Wrap" Text="фио" VerticalAlignment="Top" Width="400"
+                             PreviewTextInput="fio_PreviewTextInput" />
+                    <Label Content="Паспортные данные:" HorizontalAlignment="Left" Margin="6,66,0,0"
+                           VerticalAlignment="Top" Width="184" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="passport_number" HorizontalAlignment="Left" Height="35" Margin="6,131,0,0"
+                             TextWrapping="Wrap" Text="0000 000000" VerticalAlignment="Top" Width="250"
+                             PreviewTextInput="passport_number_PreviewTextInput" />
+                    <DatePicker x:Name="passport_date" HorizontalAlignment="Left" Margin="266,137,0,0"
+                                VerticalAlignment="Top" Width="140" Height="35" />
+                    <TextBox x:Name="passport_info" HorizontalAlignment="Left" Height="35" Margin="6,96,0,0"
+                             TextWrapping="Wrap" Text="кем выдан" VerticalAlignment="Top" Width="400" />
+                    <Label Content="Процентная ставка:" HorizontalAlignment="Left" Margin="654,198,0,0"
+                           VerticalAlignment="Top" Width="123" FontWeight="Bold" Height="35" />
+                    <ComboBox x:Name="percent" HorizontalAlignment="Left" Margin="794,198,0,0" VerticalAlignment="Top"
+                              Width="120" Height="35" />
+                    <Label Content="Валюта:" HorizontalAlignment="Left" Margin="680,252,0,0" VerticalAlignment="Top"
+                           FontWeight="Bold" Height="35" />
+                    <ComboBox x:Name="currency" HorizontalAlignment="Left" Margin="763,243,0,0" VerticalAlignment="Top"
+                              Width="177" Height="35" />
+                    <Label Content="Период кредитования: с" HorizontalAlignment="Left" Margin="571,295,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <DatePicker x:Name="start" HorizontalAlignment="Left" Margin="782,295,0,0" VerticalAlignment="Top"
+                                Height="35" />
+                    <Label Content="по:" HorizontalAlignment="Left" Margin="818,294,0,0" VerticalAlignment="Top"
+                           FontWeight="Bold" Height="35" />
+                    <DatePicker x:Name="end" HorizontalAlignment="Left" Margin="855,292,0,0" VerticalAlignment="Top"
+                                Height="35" />
+                    <Label Content="Пол: " HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top"
+                           FontWeight="Bold" Height="35" />
+                    <RadioButton x:Name="male" Content="М" HorizontalAlignment="Left" Margin="10,255,0,0"
+                                 VerticalAlignment="Top" Height="35" />
+                    <RadioButton x:Name="female" Content="Ж" HorizontalAlignment="Left" Margin="57,255,0,0"
+                                 VerticalAlignment="Top" Height="35" />
+                    <Label Content="Семейное положение:" HorizontalAlignment="Left" Margin="6,290,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <ComboBox x:Name="family_status" HorizontalAlignment="Left" Margin="6,320,0,0"
+                              VerticalAlignment="Top" Width="400" Height="35" />
+                    <Label Content="Дата рождения:" HorizontalAlignment="Left" Margin="6,166,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <DatePicker x:Name="birthdate" HorizontalAlignment="Left" Margin="6,196,0,0"
+                                VerticalAlignment="Top" Width="400" Height="35" />
+                    <Label Content="Контактный телефон:" HorizontalAlignment="Left" Margin="794,66,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="tel_number" HorizontalAlignment="Left" Height="35" Margin="989,73,0,0"
+                             TextWrapping="Wrap" Text="89111234567" VerticalAlignment="Top" Width="150"
+                             PreviewTextInput="tel_number_PreviewTextInput" />
+                    <Label Content="Эл. почта:" HorizontalAlignment="Left" Margin="10,619,0,0" VerticalAlignment="Top"
+                           FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="email" HorizontalAlignment="Left" Height="35" Margin="117,621,0,0"
+                             TextWrapping="Wrap" Text="email" VerticalAlignment="Top" Width="139" />
+                    <Label Content="Образование:" HorizontalAlignment="Left" Margin="6,354,0,0" VerticalAlignment="Top"
+                           FontWeight="Bold" Height="35" />
+                    <ComboBox x:Name="education" HorizontalAlignment="Left" Margin="6,384,0,0" VerticalAlignment="Top"
+                              Width="400" Height="35" />
+                    <Label Content="Код подразделения:" HorizontalAlignment="Left" Margin="368,243,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="education_place_code" HorizontalAlignment="Left" Height="35" Margin="541,238,0,0"
+                             TextWrapping="Wrap" Text="111" VerticalAlignment="Top" Width="77"
+                             PreviewTextInput="education_place_code_PreviewTextInput" />
+                    <Label Content="Место проживания (регистрации):" HorizontalAlignment="Left" Margin="6,546,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="live_place" HorizontalAlignment="Left" Height="35" Margin="6,576,0,0"
+                             TextWrapping="Wrap" Text="адрес" VerticalAlignment="Top" Width="400" />
+                    <Label Content="Место работы:" HorizontalAlignment="Left" Margin="6,416,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="work_place" HorizontalAlignment="Left" Margin="6,446,0,0" TextWrapping="Wrap"
+                             Text="адрес" VerticalAlignment="Top" Width="400" Height="35" />
+                    <Label Content="Телефон предприятия:" HorizontalAlignment="Left" Margin="6,481,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="work_place_number" HorizontalAlignment="Left" Height="35" Margin="6,511,0,0"
+                             TextWrapping="Wrap" Text="88121234567" VerticalAlignment="Top" Width="400"
+                             PreviewTextInput="work_place_number_PreviewTextInput" />
+                    <Label Content="Должность:" HorizontalAlignment="Left" Margin="368,336,0,0" VerticalAlignment="Top"
+                           Height="35" />
+                    <TextBox x:Name="work_post" HorizontalAlignment="Left" Height="35" Margin="407,366,0,0"
+                             TextWrapping="Wrap" Text="должность" VerticalAlignment="Top" Width="129" />
+                    <Label Content="Ежемесячные доходы на месте работы:" HorizontalAlignment="Left"
+                           Margin="652,588,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="month_income" HorizontalAlignment="Left" Height="35" Margin="854,618,0,0"
+                             TextWrapping="Wrap" Text="доходы" VerticalAlignment="Top" Width="268"
+                             PreviewTextInput="month_income_PreviewTextInput" />
+                    <Label Content="Цель получения кредита:" HorizontalAlignment="Left" Margin="566,326,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="credit_reason" HorizontalAlignment="Left" Height="35" Margin="794,328,0,0"
+                             TextWrapping="Wrap" Text="адрес" VerticalAlignment="Top" Width="348" />
+                    <Label Content="Желаемая сумма заема:" HorizontalAlignment="Left" Margin="549,361,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="sum_credit" HorizontalAlignment="Left" Height="35" Margin="774,361,0,0"
+                             TextWrapping="Wrap" Text="150000" VerticalAlignment="Top" Width="348"
+                             PreviewTextInput="sum_credit_PreviewTextInput" />
+                    <Label Content="Кол-во месяцев кредитования" HorizontalAlignment="Left" Margin="522,391,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="sum_month" HorizontalAlignment="Left" Height="35" Margin="782,389,0,0"
+                             TextWrapping="Wrap" Text="6" VerticalAlignment="Top" Width="348"
+                             PreviewTextInput="sum_month_PreviewTextInput" />
+                    <Label Content="Ежемесячное погашение" HorizontalAlignment="Left" Margin="536,421,0,0"
+                           VerticalAlignment="Top" FontWeight="Bold" Height="35" />
+                    <TextBox x:Name="res_month_incert" HorizontalAlignment="Left" Height="35" Margin="774,421,0,0"
+                             TextWrapping="Wrap" VerticalAlignment="Top" Width="348"
+                             SelectionChanged="res_month_insert_SelectionChanged" IsReadOnly="True" />
+                    <Button x:Name="to_card" Content="Перейти к регистрации кредитной карты" HorizontalAlignment="Left"
+                            Margin="1023,587,0,0" VerticalAlignment="Top" Width="247" Height="35" Click="to_card_Click" />
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="card_reg" Header="Регистрация кредитной карты" IsEnabled="False" Width="465" FontSize="16">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Индекс" HorizontalAlignment="Left" Margin="691,80,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="IL" HorizontalAlignment="Left" Height="23" Margin="762,87,0,0" TextWrapping="Wrap"
+                             Text="TextBox" VerticalAlignment="Top" Width="130" />
+                    <TextBox x:Name="system_code" HorizontalAlignment="Left" Height="23" Margin="95,110,0,0"
+                             TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Width="21"
+                             PreviewTextInput="system_code_PreviewTextInput" />
+                    <TextBox x:Name="bank_code" HorizontalAlignment="Left" Height="23" Margin="188,110,0,0"
+                             TextWrapping="Wrap" Text="*** **" VerticalAlignment="Top" Width="41"
+                             PreviewTextInput="bank_code_PreviewTextInput" />
+                    <TextBox x:Name="bill_number" HorizontalAlignment="Left" Height="23" Margin="319,110,0,0"
+                             TextWrapping="Wrap" Text="** **** ***" VerticalAlignment="Top" Width="65"
+                             PreviewTextInput="bill_number_PreviewTextInput" />
+                    <TextBox x:Name="check_number" HorizontalAlignment="Left" Height="23" Margin="500,116,0,0"
+                             TextWrapping="Wrap" Text="*" VerticalAlignment="Top" Width="21"
+                             PreviewTextInput="check_number_PreviewTextInput" />
+                    <Label Content="Код системы" HorizontalAlignment="Left" Margin="0,87,0,0" VerticalAlignment="Top" />
+                    <Label Content="Код банка" HorizontalAlignment="Left" Margin="144,78,0,0" VerticalAlignment="Top" />
+                    <Label Content="Номер счета" HorizontalAlignment="Left" Margin="271,80,0,0" VerticalAlignment="Top" />
+                    <Label Content="Проверочное число" HorizontalAlignment="Left" Margin="416,80,0,0"
+                           VerticalAlignment="Top" />
+                    <Label Content="CVV" HorizontalAlignment="Left" Margin="607,87,0,0" VerticalAlignment="Top" />
+                    <TextBox x:Name="cvv" HorizontalAlignment="Left" Height="23" Margin="607,122,0,0"
+                             TextWrapping="Wrap" Text="***" VerticalAlignment="Top" Width="28"
+                             PreviewTextInput="cvv_PreviewTextInput" />
+                    <Label Content="Начало действия" HorizontalAlignment="Left" Margin="10,139,0,0"
+                           VerticalAlignment="Top" />
+                    <Label Content="Окончание действия" HorizontalAlignment="Left" Margin="234,139,0,0"
+                           VerticalAlignment="Top" />
+                    <DatePicker x:Name="card_start" HorizontalAlignment="Left" Margin="180,141,0,0"
+                                VerticalAlignment="Top" Width="49" />
+                    <DatePicker x:Name="card_end" HorizontalAlignment="Left" Margin="434,141,0,0"
+                                VerticalAlignment="Top" Width="103" />
+                    <Label Content="Проверочное слово" HorizontalAlignment="Left" Margin="691,124,0,0"
+                           VerticalAlignment="Top" />
+                    <TextBox x:Name="check_word" HorizontalAlignment="Left" Height="23" Margin="877,141,0,0"
+                             TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"
+                             PreviewTextInput="check_word_PreviewTextInput" />
+                    <Grid Background="DarkKhaki" HorizontalAlignment="Left" Height="172" Margin="10,170,0,0"
+                          VerticalAlignment="Top" Width="311">
+                        <Label Content="МАХМАДКРЕДИТ" HorizontalAlignment="Left" Margin="10,10,0,0"
+                               VerticalAlignment="Top" />
+                        <TextBox x:Name="number_field" HorizontalAlignment="Left" Height="23" Margin="10,75,0,0"
+                                 TextWrapping="Wrap" Text="номер" VerticalAlignment="Top" Width="274" IsReadOnly="True" />
+                        <TextBox x:Name="card_period" HorizontalAlignment="Left" Height="23" Margin="10,103,0,0"
+                                 TextWrapping="Wrap" Text="действие" VerticalAlignment="Top" Width="126"
+                                 IsReadOnly="True" />
+                        <TextBox x:Name="card_fio" HorizontalAlignment="Left" Height="23" Margin="10,131,0,0"
+                                 TextWrapping="Wrap" Text="фио" VerticalAlignment="Top" Width="212" IsReadOnly="True" />
+                        <TextBox x:Name="type_of" HorizontalAlignment="Left" Height="23" Margin="227,131,0,0"
+                                 TextWrapping="Wrap" Text="тип" VerticalAlignment="Top" Width="57" IsReadOnly="True" />
+
+                    </Grid>
+                    <Grid Background="DarkKhaki" HorizontalAlignment="Left" Height="172" Margin="326,170,0,0"
+                          VerticalAlignment="Top" Width="311">
+                        <Label Content="МАХМАДКРЕДИТ" HorizontalAlignment="Left" Margin="10,10,0,0"
+                               VerticalAlignment="Top" />
+                        <TextBox x:Name="res_card" HorizontalAlignment="Left" Height="23" Margin="10,75,0,0"
+                                 TextWrapping="Wrap" Text="///////////////////////////    ***" VerticalAlignment="Top"
+                                 Width="212" IsReadOnly="True" />
+
+                    </Grid>
+                    <ComboBox x:Name="card_type" HorizontalAlignment="Left" Margin="43,41,0,0" VerticalAlignment="Top"
+                              Width="219" />
+                    <Button Content="add" HorizontalAlignment="Left" Margin="23,439,0,0" VerticalAlignment="Top"
+                            Width="75" Click="Button_Click" />
+                    <Button x:Name="full_reset" Content="Полная отмена регистрации" HorizontalAlignment="Left"
+                            Margin="128,439,0,0" VerticalAlignment="Top" Width="215" Height="68"
+                            Click="full_reset_Click" />
+
+
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="rem_reg" Header="Погашение" Width="350" FontSize="16">
+                <Grid Background="#FFE5E5E5" Width="1280" Margin="-10,0,0,0">
+                    <DataGrid x:Name="dgv" HorizontalAlignment="Left" VerticalAlignment="Top" Height="260" Width="1000"
+                              AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dgv_SelectionChanged">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding customer.fio}" Header="Клиент" Width="*" />
+                            <DataGridTextColumn Binding="{Binding card.card_id}" Header="Карта" Width="*" />
+                            <DataGridTextColumn Binding="{Binding percent_set}" Header="Процент" Width="*" />
+                            <DataGridTextColumn Binding="{Binding currency}" Header="Валюта" Width="*" />
+                            <DataGridTextColumn Binding="{Binding credit_start}" Header="Начало" Width="*" />
+                            <DataGridTextColumn Binding="{Binding credit_end}" Header="Конец" Width="*" />
+                            <DataGridTextColumn Binding="{Binding sum}" Header="Сумма займа" Width="*" />
+                            <DataGridTextColumn Binding="{Binding remainer}" Header="Остаток" Width="*" />
+
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="Просмотр договора" HorizontalAlignment="Left" Margin="0,265,0,0"
+                            VerticalAlignment="Top" Width="161" />
+                    <Button Content="Печать договора" HorizontalAlignment="Left" Margin="0,292,0,0"
+                            VerticalAlignment="Top" Width="161" />
+                    <Button Content="Просмотр условий" HorizontalAlignment="Left" Margin="166,265,0,0"
+                            VerticalAlignment="Top" Width="161" />
+                    <Button Content="Печать условий" HorizontalAlignment="Left" Margin="166,292,0,0"
+                            VerticalAlignment="Top" Width="161" />
+                    <Label Content="Ежемесячное погашение:" HorizontalAlignment="Left" Margin="1,327,0,0"
+                           VerticalAlignment="Top" Width="155" />
+                    <TextBox x:Name="month_check" HorizontalAlignment="Left" Height="23" Margin="157,329,0,0"
+                             TextWrapping="Wrap" Text="сумма" VerticalAlignment="Top" Width="277" IsReadOnly="True" />
+                    <Button x:Name="incert" Content="Внести" HorizontalAlignment="Left" Margin="439,330,0,0"
+                            VerticalAlignment="Top" Width="60" Click="insert_Click" />
+                    <Label Content="Досрочное погашение:" HorizontalAlignment="Left" Margin="1,353,0,0"
+                           VerticalAlignment="Top" Width="155" />
+                    <TextBox x:Name="some_month" HorizontalAlignment="Left" Height="23" Margin="206,355,0,0"
+                             TextWrapping="Wrap" Text="кол-во" VerticalAlignment="Top" Width="51"
+                             PreviewTextInput="some_month_PreviewTextInput" />
+                    <Label Content="месяцы:" HorizontalAlignment="Left" Margin="145,353,0,0" VerticalAlignment="Top"
+                           Width="56" />
+                    <TextBox x:Name="random_check" HorizontalAlignment="Left" Height="23" Margin="262,355,0,0"
+                             TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="172"
+                             SelectionChanged="random_check_SelectionChanged" IsReadOnly="True" />
+                    <Button x:Name="incert_month" Content="Внести" HorizontalAlignment="Left" Margin="439,356,0,0"
+                            VerticalAlignment="Top" Width="60" Click="insert_month_Click" />
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+    </Grid>
+</Window>
