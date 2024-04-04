@@ -14,7 +14,7 @@ namespace clothing_repair
             if (done != null)
             {
                 var message = new MimeMessage();
-                message.From.Add(new MailboxAddress(org_name, email_from)); //fed.timushev@gmail.com
+                message.From.Add(new MailboxAddress(org_name, email_from));
                 message.To.Add(new MailboxAddress(done.customer.mail));
                 message.Subject = "Заказ из ателье!";
                 var builder = new BodyBuilder();
@@ -28,7 +28,7 @@ namespace clothing_repair
                     {
                         client.ServerCertificateValidationCallback = (s, c, h, a) => true;
                         client.Connect("smtp.mail.ru", 587, false); //smtp.gmail.com
-                        client.Authenticate(mail_login, mail_pass); //"fed.timushev@gmail.com", "F8e7d6y5A4"
+                        client.Authenticate(mail_login, mail_pass);
                         client.Send(message);
                         client.Disconnect(true);
                     }
